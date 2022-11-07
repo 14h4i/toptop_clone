@@ -14,20 +14,20 @@ class VideosAPI {
   }
 
   Future<List<Video>> getVideoList() async {
-    var data = await FirebaseFirestore.instance.collection("Videos").get();
+    // var data = await FirebaseFirestore.instance.collection("Videos").get();
 
     var videoList = <Video>[];
-    var videos;
+    var videos =data;
 
-    if (data.docs.length == 0) {
-      await addDemoData();
-      videos = (await FirebaseFirestore.instance.collection("Videos").get());
-    } else {
-      videos = data;
-    }
+    // if (data.docs.length == 0)  {
+    //   await addDemoData();
+    //   videos = (await FirebaseFirestore.instance.collection("Videos").get());
+    // } else {
+    //   videos = data;
+    // }
 
-    videos.docs.forEach((element) {
-      Video video = Video.fromJson(element.data());
+    videos.forEach((element) {
+      Video video = Video.fromJson(element);
       videoList.add(video);
     });
 

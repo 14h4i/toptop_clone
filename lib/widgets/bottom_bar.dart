@@ -87,7 +87,7 @@ class BottomBar extends StatelessWidget {
         },
         child: Container(
           height: 45,
-          width: 80,
+          width: 75,
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
