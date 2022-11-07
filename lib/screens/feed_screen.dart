@@ -439,7 +439,7 @@ class _FeedScreenState extends State<FeedScreen> {
       mainAxisAlignment: MainAxisAlignment.end,
       children: [
         Expanded(child: currentScreen()),
-        BottomBar(),
+        // BottomBar(),
       ],
     );
   }
