@@ -1,4 +1,3 @@
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:tiktok_flutter/data/demo_data.dart';
 import 'package:tiktok_flutter/data/video.dart';
 
@@ -34,9 +33,9 @@ class VideosAPI {
     return videoList;
   }
 
-  Future<Null> addDemoData() async {
-    for (var video in data) {
-      await FirebaseFirestore.instance.collection("Videos").add(video);
-    }
-  }
+  // Future<Null> addDemoData() async {
+  //   for (var video in data) {
+  //     await FirebaseFirestore.instance.collection("Videos").add(video);
+  //   }
+  // }
 }
